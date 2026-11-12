@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Step2 grounded feedback card", "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "mode", "text", "verified_facts", "remaining_requirement", "next_tool", "next_subgoal", "previous_hint_outcome", "budget_omissions", "measured_units"],
+  "properties": {
+    "schema_version": {"const": "step2-v1"}, "mode": {"enum": ["facts_only", "grounded", "adaptive"]},
+    "text": {"type": "string"}, "remaining_requirement": {"type": "string"},
+    "next_tool": {"type": ["string", "null"]}, "next_subgoal": {"type": ["string", "null"]},
+    "previous_hint_outcome": {"type": ["string", "null"]}, "budget_omissions": {"type": "array", "items": {"type": "string"}},
+    "measured_units": {"type": "integer", "minimum": 0},
+    "verified_facts": {"type": "array", "items": {"type": "object", "required": ["key", "value", "source_kind", "source_id", "active"], "properties": {"key": {"type": "string"}, "value": {}, "source_kind": {"enum": ["user_goal", "tool_success"]}, "source_id": {"type": "string"}, "active": {"const": true}}}}
+  }
+}

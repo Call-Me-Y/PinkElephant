@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Step2 facts and old positive guidance combination",
+  "type": "object",
+  "required": ["schema_version", "mode", "text", "facts_text", "addition", "verified_facts", "legacy_card", "matching_count", "measured_units", "fact_block_budget"],
+  "properties": {
+    "schema_version": {"const": "step2-combination-v1"},
+    "mode": {"enum": ["facts_control", "facts_retry", "facts_diagnosis", "facts_positive"]},
+    "text": {"type": "string"}, "facts_text": {"type": "string"}, "addition": {"type": "string"},
+    "verified_facts": {"type": "array"}, "legacy_card": {"type": ["object", "null"]},
+    "matching_count": {"type": "integer", "minimum": 1},
+    "measured_units": {"type": "integer", "minimum": 0}, "fact_block_budget": {"const": 256}
+  }
+}

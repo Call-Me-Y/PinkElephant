@@ -1,0 +1,1 @@
+case_id,condition,goal_requirement,evidence_source_valid,stale_fact_reintroduced,failed_only_value_exposed,next_subgoal_supported,tool_ok_but_goal_unmet,notes

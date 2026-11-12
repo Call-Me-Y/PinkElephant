@@ -1,0 +1,8 @@
+{
+  "mode": "controlled", "data_path": "data/natural_dev.jsonl",
+  "output_dir": "results/native-development-v1",
+  "conditions": ["drop", "abstract", "positive_history", "facts_only", "grounded", "adaptive"],
+  "actor": {"kind": "transformers", "model_path": "Qwen2.5-0.5B-Instruct", "device": "cuda", "dtype": "float16", "cpu_threads": 4, "max_new_tokens": 96, "context_limit": 8192},
+  "max_steps": 3, "batch_size": 4, "max_calls": 500, "max_feedback_tokens": 256, "max_feedback_bytes": 1800,
+  "seed": 42
+}

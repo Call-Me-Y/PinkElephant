@@ -1,0 +1,8 @@
+{
+  "mode": "controlled", "data_path": "../step1/data/pilot.jsonl",
+  "output_dir": "results/local-9b-development-v1",
+  "conditions": ["drop", "abstract", "positive_history", "facts_only", "grounded", "adaptive"],
+  "actor": {"kind": "chat_api", "base_url": "http://127.0.0.1:8080/v1", "base_url_env": "PE_BASE_URL", "model": "Qwen3.5-9B", "model_env": "PE_MODEL", "api_key_env": "PE_API_KEY", "temperature": 0, "max_new_tokens": 128, "send_seed": true, "timeout_seconds": 120, "extra_body": {"chat_template_kwargs": {"enable_thinking": false}}},
+  "max_steps": 3, "batch_size": 1, "max_calls": 900, "max_feedback_tokens": 256, "max_feedback_bytes": 1800,
+  "seed": 42
+}

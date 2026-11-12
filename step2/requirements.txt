@@ -1,0 +1,4 @@
+# ToolShed adapter; use the existing shared Python environment.
+numpy>=1.26,<3
+# Direct local inference additionally uses existing torch/transformers.
+
