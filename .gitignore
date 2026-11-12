@@ -1,0 +1,59 @@
+# Local environment settings. Keep the shareable template.
+.env
+.env.*
+!.env.example
+
+# Local Python environments and interpreter files
+/.venv/
+/venv/
+/.venv_*/
+/bin/
+/include/
+/lib/
+/lib64
+/pyvenv.cfg
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Shared runtime, benchmark datasets, and local run artifacts
+/_shared/
+/data/
+**/outputs/
+**/experiments/outputs/
+**/results/
+**/logs/
+*.log
+*.db
+*.sqlite
+*.sqlite3
+
+# Local models and model caches
+/models/
+**/.hf/
+**/hf-cache/
+**/huggingface/
+*.gguf
+*.safetensors
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.model
+
+# Upstream checkouts used as literature references.
+# Keep the project-owned PDFs and notes in /literature, but do not vendor
+# nested Git repositories, their code, or their experiment artifacts.
+/literature/Sentry/
+/literature/feedback-that-backfires/
+
+# Nested repository metadata and common temporary files
+**/.git/
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
