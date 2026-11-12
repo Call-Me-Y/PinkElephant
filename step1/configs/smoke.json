@@ -1,0 +1,13 @@
+{
+  "experiment_id": "smoke-v1",
+  "mode": "controlled",
+  "dataset": {
+    "path": "data/smoke.jsonl", "split": "smoke", "world_seed": 20261112,
+    "families": ["missing_argument", "unexpected_argument", "format_error"],
+    "per_family": 2, "history_depths": [1, 2], "candidate_tasks": 120
+  },
+  "conditions": ["verbatim", "abstract", "positive_current", "positive_history", "verbatim_positive"],
+  "backend": {"kind": "smoke"},
+  "seed": 42, "samples": 1, "max_steps": 3, "max_requests": 180,
+  "output_dir": "results/smoke-v1"
+}

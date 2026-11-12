@@ -1,0 +1,18 @@
+{
+  "experiment_id": "local-pilot-v1",
+  "mode": "controlled",
+  "dataset": {
+    "path": "data/pilot.jsonl", "split": "pilot", "world_seed": 20261113,
+    "families": ["missing_argument", "unexpected_argument", "format_error"],
+    "per_family": 8, "history_depths": [1, 2], "candidate_tasks": 600
+  },
+  "conditions": ["verbatim", "abstract", "positive_current", "positive_history", "verbatim_positive"],
+  "backend": {
+    "kind": "chat_api", "base_url": "http://127.0.0.1:8080/v1", "base_url_env": "PE_BASE_URL",
+    "model": "Qwen3.5-9B", "model_env": "PE_MODEL", "api_key_env": "PE_API_KEY",
+    "temperature": 0, "max_new_tokens": 128, "send_seed": true, "timeout_seconds": 120,
+    "extra_body": {"chat_template_kwargs": {"enable_thinking": false}}
+  },
+  "seed": 42, "samples": 1, "max_steps": 3, "max_requests": 800,
+  "output_dir": "results/local-pilot-v1"
+}

@@ -1,0 +1,16 @@
+{
+  "evaluation_data": "data/pilot.jsonl",
+  "training_config": {
+    "dataset": {
+      "path": "data/intervention_train.jsonl", "split": "intervention_train", "world_seed": 20261114,
+      "families": ["missing_argument", "unexpected_argument", "format_error"],
+      "per_family": 16, "history_depths": [1, 2], "candidate_tasks": 900
+    }
+  },
+  "model": {"kind": "transformers", "model_path": "Qwen2.5-0.5B-Instruct", "device": "cuda", "cpu_threads": 4, "context_limit": 8192},
+  "output_dir": "results/interventions-v1",
+  "training": {"rank": 8, "alpha": 8, "epochs": 4, "learning_rate": 0.001, "ul_weight": 1.0, "seed": 42},
+  "arms": ["drop", "verbatim", "abstract", "positive_history", "ftb_ban", "abstract_ban", "local_constraints", "contrast_025", "contrast_05", "contrast_1", "sft_head", "ul_head"],
+  "max_steps": 3, "max_new_tokens": 96, "plausibility_ratio": 0.1,
+  "decode": "greedy", "seed": 42
+}

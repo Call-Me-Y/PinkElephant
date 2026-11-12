@@ -1,0 +1,4 @@
+# Only the upstream ToolShed environment needs numpy. Model serving is separate.
+numpy>=1.26,<3
+# Optional direct local inference: use the existing torch/transformers environment.
+

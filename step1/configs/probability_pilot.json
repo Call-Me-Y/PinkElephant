@@ -1,0 +1,7 @@
+{
+  "dataset_path": "data/pilot.jsonl",
+  "output_dir": "results/probability-pilot-v1",
+  "conditions": ["pre_clean", "neutral", "verbatim", "abstract", "positive_current", "positive_history", "verbatim_positive"],
+  "model": {"kind": "transformers", "model_path": "Qwen2.5-0.5B-Instruct", "device": "cpu", "cpu_threads": 4, "context_limit": 8192},
+  "candidate_count": 4
+}

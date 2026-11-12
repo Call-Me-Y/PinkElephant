@@ -1,0 +1,17 @@
+{
+  "experiment_id": "api-pilot-v1",
+  "mode": "controlled",
+  "dataset": {
+    "path": "data/pilot.jsonl", "split": "pilot", "world_seed": 20261113,
+    "families": ["missing_argument", "unexpected_argument", "format_error"],
+    "per_family": 8, "history_depths": [1, 2], "candidate_tasks": 600
+  },
+  "conditions": ["verbatim", "abstract", "positive_current", "positive_history", "verbatim_positive"],
+  "backend": {
+    "kind": "chat_api", "base_url_env": "PE_BASE_URL", "model_env": "PE_MODEL", "api_key_env": "PE_API_KEY",
+    "temperature": 0, "max_new_tokens": 128, "send_seed": false, "timeout_seconds": 120,
+    "token_limit_field": "max_tokens", "extra_body": {}
+  },
+  "seed": 42, "samples": 1, "max_steps": 3, "max_requests": 800,
+  "output_dir": "results/api-pilot-v1"
+}

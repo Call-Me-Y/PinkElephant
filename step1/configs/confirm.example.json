@@ -1,0 +1,18 @@
+{
+  "experiment_id": "confirm-v1",
+  "mode": "controlled",
+  "dataset": {
+    "path": "data/confirm.jsonl", "split": "confirm", "world_seed": 20261120,
+    "families": ["missing_argument", "unexpected_argument", "format_error"],
+    "per_family": 20, "history_depths": [1, 2], "candidate_tasks": 1200
+  },
+  "conditions": ["verbatim", "abstract", "positive_current", "positive_history", "verbatim_positive"],
+  "backend": {
+    "kind": "chat_api", "base_url": "http://127.0.0.1:8080/v1", "model": "Qwen3.5-9B",
+    "base_url_env": "PE_BASE_URL", "model_env": "PE_MODEL", "api_key_env": "PE_API_KEY",
+    "temperature": 0.2, "max_new_tokens": 128, "send_seed": true, "timeout_seconds": 120,
+    "extra_body": {"chat_template_kwargs": {"enable_thinking": false}}
+  },
+  "seed": 42, "samples": 3, "max_steps": 3, "max_requests": 5500,
+  "output_dir": "results/confirm-v1"
+}

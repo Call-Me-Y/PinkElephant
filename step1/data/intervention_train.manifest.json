@@ -1,0 +1,56 @@
+{
+  "dataset_spec": {
+    "path": "data/intervention_train.jsonl",
+    "split": "intervention_train",
+    "world_seed": 20261114,
+    "families": [
+      "missing_argument",
+      "unexpected_argument",
+      "format_error"
+    ],
+    "per_family": 16,
+    "history_depths": [
+      1,
+      2
+    ],
+    "candidate_tasks": 900
+  },
+  "sha256": "d6c3cffd8806d7f5708307fbd6277159c07709a7fae35ff81c5581455ce25756",
+  "cases": 96,
+  "task_clusters": 48,
+  "counts_by_family_tasks": {
+    "missing_argument": 16,
+    "unexpected_argument": 16,
+    "format_error": 16
+  },
+  "task_templates": [
+    "archive",
+    "cancel_event",
+    "convert",
+    "email_file",
+    "roster",
+    "schedule"
+  ],
+  "upstream": {
+    "path": "C:\\Projects\\AI\\PE\\literature\\feedback-that-backfires",
+    "commit": "4af040142b5982ed3c1752dd4a151490e0da592d",
+    "tracked_changes": [
+      " M README.md",
+      " M scripts/bench_forward.py",
+      " M scripts/check_version_drift.py",
+      " M scripts/download_models.py",
+      " M scripts/launch_probes.py",
+      " M scripts/make_facts.py",
+      " M scripts/profile_probe.py",
+      " M scripts/reproduce.sh",
+      " M scripts/run_agent_study.py",
+      " M scripts/run_probe.py",
+      " M scripts/run_schedule.py",
+      " M scripts/verify_scoring.py",
+      " M src/slmecho/models.py"
+    ],
+    "reused_source_sha256": "e7b13e9a459ba358fc3f4c726a92b78276afc5158d66f028889f20577c511a0a"
+  },
+  "synthetic_failures": true,
+  "warning": "Private reference actions are for replay/smoke validation only; never send them to a real actor or monitor."
+}

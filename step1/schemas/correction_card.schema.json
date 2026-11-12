@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PinkElephant rule-based correction card v1",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "tool", "error_family", "matching_failures", "guidance_level", "positive_guidance", "evidence_source"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "tool": {"type": "string"}, "error_family": {"type": "string"},
+    "matching_failures": {"type": "integer", "minimum": 1},
+    "guidance_level": {"enum": ["repair", "check_then_act"]},
+    "positive_guidance": {"type": "string", "minLength": 1},
+    "evidence_source": {"const": "executed_errors_and_public_tool_schema"}
+  }
+}
